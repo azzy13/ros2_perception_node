@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="perception" exec="tracker" name="tracker"/>
+  <executable cmd="ros2 bag play /bagfiles/adk5.db3" output="screen" />
+</launch>

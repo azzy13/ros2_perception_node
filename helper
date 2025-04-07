@@ -1,0 +1,5 @@
+docker pull osrf/ros:foxy-desktop
+
+docker run -it osrf/ros:foxy-desktop
+
+docker run -it --rm   -v /isis/home/hasana3/ros2_image/bagfiles:/bags   -v /isis/home/hasana3/ros2_image/output:/output  -v /isis/home/hasana3/ros2_image/scripts:/scripts osrf/ros:foxy-desktop
