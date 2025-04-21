@@ -3,7 +3,7 @@ FROM ros:humble
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install system dependencies
-RUN apt update && apt install -y \
+RUN apt update && apt install -y nano\
     python3-pip python3-dev \
     git curl wget build-essential cmake pkg-config \
     libglib2.0-0 libsm6 libxrender1 libxext6 libgl1-mesa-glx \

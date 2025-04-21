@@ -3,17 +3,32 @@
 <package format="3">
   <name>perception</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Vehicle detection and tracking using ByteTrack and YOLOX in ROS 2</description>
   <maintainer email="root@todo.todo">root</maintainer>
   <license>TODO: License declaration</license>
 
+  <!-- Dependencies for running the node -->
   <exec_depend>ros2launch</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+
+  <!-- Message generation dependencies -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- Test dependencies -->
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
 
   <export>
-    <build_type>ament_python</build_type>
+    <!-- Important: switch from ament_python to ament_cmake if you use msg generation -->
+    <build_type>ament_cmake</build_type>
+    <member_of_group>rosidl_interface_packages</member_of_group>
   </export>
 </package>
+
